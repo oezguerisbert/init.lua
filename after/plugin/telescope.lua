@@ -11,6 +11,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers,
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics,
     { noremap = true, silent = true }
 )
+vim.keymap.set('n', '<leader>?', builtin.oldfiles,
+    { noremap = true, silent = true }
+)
 vim.keymap.set('n', '<leader>fh', builtin.help_tags,
     { noremap = true, silent = true }
 )
