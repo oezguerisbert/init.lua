@@ -15,9 +15,11 @@ return {
     "saadparwaiz1/cmp_luasnip",
     "j-hui/fidget.nvim",
     "VonHeikemen/lsp-zero.nvim",
-    "rafamadriz/friendly-snippets"
+    "rafamadriz/friendly-snippets",
+    "onsails/lspkind.nvim",
   },
   config = function()
+    local lspkind = require("lspkind")
     local cmp = require('cmp')
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = vim.tbl_deep_extend(
@@ -76,9 +78,17 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
+        { name = "supermaven" }
       }, {
           { name = 'buffer' },
-        })
+        }),
+      formatting = {
+    format = lspkind.cmp_format({
+      mode = "symbol",
+      max_width = 50,
+      symbol_map = { Supermaven = "" }
+    })
+  }
     })
 
     vim.diagnostic.config({
