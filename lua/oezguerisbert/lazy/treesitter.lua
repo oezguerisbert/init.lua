@@ -18,6 +18,14 @@ return {
         enable = true
       },
 
+      folds = {
+        enable = true
+      },
+
+      foldmethod = "expr",
+      foldexpr = "nvim_treesitter#foldexpr()",
+      foldlevel = 99,
+
       highlight = {
         -- `false` will disable the whole extension
         enable = true,
