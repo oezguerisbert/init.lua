@@ -42,11 +42,17 @@ return {
           properties = {},
           types = {},
         },
+        integrations = {
+          gitsigns = true,
+          treesitter = true,
+          cmp = true,
+          telescope = true,
+        },
         color_overrides = {
           mocha = {
             base = "#080808",
-            mantle = "#000000",
-            crust = "#000000",
+            mantle = "#080808",
+            crust = "#282828",
           },
         },
      })
