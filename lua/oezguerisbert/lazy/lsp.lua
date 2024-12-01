@@ -35,14 +35,14 @@ return {
         "lua_ls",
         "rust_analyzer",
         "gopls",
-        "tsserver",
+        "ts_ls",
       },
       handlers = {
         function(server_name) -- default handler (optional)
           -- https://github.com/neovim/nvim-lspconfig/pull/3232
-					if server_name == "tsserver" then
-						server_name = "ts_ls"
-					end
+					-- if server_name == "tsserver" then
+					-- 	server_name = "ts_ls"
+					-- end
           require("lspconfig")[server_name].setup {
             capabilities = capabilities
           }
@@ -80,7 +80,7 @@ return {
       }),
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'luasnip' }, -- For luasnip users.
+        -- { name = 'luasnip' }, -- For luasnip users.
         { name = "supermaven" }
       }, {
           { name = 'buffer' },
