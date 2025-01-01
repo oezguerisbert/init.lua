@@ -20,6 +20,14 @@ return {
   },
   config = function()
     local lspkind = require("lspkind")
+    lspkind.init({
+      symbol_map = {
+        Supermaven = "",
+      }
+    })
+
+    vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", {fg ="#6CC644"})
+
     local cmp = require('cmp')
     local cmp_lsp = require("cmp_nvim_lsp")
     local capabilities = vim.tbl_deep_extend(

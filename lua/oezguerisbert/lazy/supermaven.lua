@@ -1,4 +1,4 @@
---[[ return {
+return {
   "supermaven-inc/supermaven-nvim",
   config = function()
     require("supermaven-nvim").setup({
@@ -6,9 +6,7 @@
         accept_suggestion = "<Tab>",
       },
       disable_inline_completion = true,
+      disable_keymaps = false,
     })
   end,
-} ]]
-
-return {
 }
